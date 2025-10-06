@@ -1,0 +1,656 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: aliceblue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*encabezado.css*/
+header {
+    grid-area: header;
+    background-color: blanchedalmond;
+    top: 0;
+    align-items: center;
+    margin: 2em;
+    padding: 1em;
+}
+
+header h1, h2{
+    text-align: center;
+}
+
+nav {
+    grid-area: nav;
+    background-color: blanchedalmond;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 2em;
+    padding: 1em;
+}
+
+.nav_curriculo {
+    grid-area: nav;
+    background-color: blanchedalmond;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 2em 2em 0em 2em;
+    padding: 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+/*piedepagina.css*/
+footer{
+    grid-area: footer;
+    background-color: blanchedalmond;
+    padding: 1em;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 0;           
+}
+
+/*index.css*/
+body.index{
+    display: grid;
+    grid-template-areas: "header header"
+                        "main main"
+                        "footer footer";
+    grid-template-rows: auto auto auto;
+    row-gap: 1em 1em 1em;
+}
+
+main.index {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "bienvenida bienvenida"
+                        "enlaces enlaces";
+    grid-template-rows: auto auto;
+    row-gap: 0em;
+}
+
+section.bienvenida {
+    grid-area: bienvenida;
+    background-color:  blanchedalmond;
+    margin: 2em;
+    margin-bottom: 0em;
+    padding: 1em;
+}
+
+section.bienvenida p{
+    text-align: center;
+}
+
+section.enlaces {
+    grid-area: enlaces;
+    background-color:  blanchedalmond;
+    text-align: center;
+    margin-top: 0em;
+    margin: 2em;
+    padding: 1em;
+}
+
+section.enlaces a{
+    text-decoration: none;
+    color: black;
+}
+
+/*biografias.css*/
+body.biografia{
+    display: grid;
+    grid-template-areas: "header header"
+                        "nav nav"
+                        "main main"
+                        "footer footer";
+    grid-template-rows: auto auto auto;
+    row-gap: 1em 1em 1em;
+}
+
+main.biografia{
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "sobremi"
+                        "librosfavoritos"
+                        "peliculasfavoritas"
+                        "cancionesfavoritas"
+                        "multimedia";
+    grid-column: auto auto auto auto auto;
+    row-gap: 1em 1em 1em 1em 1em;
+}
+
+main.biografia .enlace{
+    text-align: center;
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;   
+    width: 320px;           
+    margin: 2rem auto;      
+    padding: 1rem;        
+}
+
+main.biografia .enlace a{
+    text-decoration: none;
+    color: black;
+}
+
+section.sobremi{
+    grid-area: sobremi;
+    display: grid;
+    grid-template-areas:"titulo" 
+                        "sobremi"
+                        "video"
+                        "pasatiempos";
+    grid-template-rows: auto auto auto auto;
+    row-gap: 1em 0em 0em 0em;
+}
+
+section.sobremi .titulo-sobremi{
+    grid-area: titulo;
+    border: 1px solid black;
+    border-color: black;
+    margin: 2em;
+    background-color:  blanchedalmond;
+}
+
+section.sobremi .texto-sobremi{
+    grid-area: sobremi;
+    display: grid;
+    grid-template-areas: "texto imagen";
+    grid-template-columns: 1fr auto;
+    border: 1px solid black;
+    border-color: black;
+    margin-left: 2em;
+    margin-right: 2em;
+    background-color:  blanchedalmond;
+}
+
+section.sobremi .titulo-sobremi h2{
+    text-align: left;
+    margin: 1em;
+}
+
+section.sobremi .texto-sobremi p{
+    grid-area: texto;
+    text-align: justify;
+    margin: 1em;
+}
+
+section.sobremi .texto-sobremi img{
+    grid-area: imagen;
+    justify-self: end;       
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+    margin: 1em;
+}
+
+section.sobremi .video-presentacion{
+    grid-area: video;
+    border: 1px solid black;
+    border-color: black;
+    margin-left: 2em;
+    margin-right: 2em;
+    background-color:  blanchedalmond;
+}
+section.sobremi .video-presentacion h3{
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+section.sobremi .video-presentacion video{
+    display: block;
+    margin: 1em auto;                 
+    max-width: 100%;
+    height: auto;
+}
+
+section.sobremi .pasatiempos{
+    grid-area: pasatiempos;
+    display: grid;
+    grid-template-areas: "pasatiempo cualidades sitioweb";
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 1px solid black;
+    border-color: black;
+    margin-left: 2em;
+    margin-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color:  blanchedalmond;
+}
+section.sobremi .pasatiempos h3{
+    text-align: center;
+}
+section.sobremi .pasatiempos .pasatiempo{
+    grid-area: pasatiempo;
+}
+
+section.sobremi .pasatiempos .pasatiempo ul, li{
+    list-style-position: inside;
+    text-align: center;
+}
+
+section.sobremi .pasatiempos .cualidades{
+    grid-area: cualidades;
+}
+
+section.sobremi .pasatiempos .cualidades dl{
+    text-align: justify;
+}
+
+section.sobremi .pasatiempos .sitioweb{
+    grid-area: sitioweb;
+    text-align: center;
+}
+
+section.librosfavoritos{
+    grid-area: librosfavoritos;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.librosfavoritos .titulo{
+    border: 1px solid black;
+    border-color: black;
+    margin-top: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+    background-color:  blanchedalmond;
+    width: 100%;
+}
+
+section.librosfavoritos  h2, p{
+    text-align: left;
+    margin-left: 1em;
+}
+
+section.librosfavoritos .lista-libros{
+    list-style: decimal inside;     
+    margin: 2em;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 0;                         
+    background: blanchedalmond;
+    border: 1px solid black;
+}
+
+section.librosfavoritos .lista-libros li{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: .75rem;
+    padding: 1rem;
+    border: 1px solid #000;  
+}
+
+section.librosfavoritos .lista-libros img{
+    width: 90px;
+    height: 120px;
+    object-fit: fill;
+    display: block;
+}
+
+section.peliculasfavoritas{
+  grid-area: peliculasfavoritas;
+  display: grid;
+  grid-template-areas:
+    "titulo"
+    "peliculas";
+  row-gap: 1em;
+}
+
+section.peliculasfavoritas .titulo{
+  grid-area: titulo;
+  background-color: blanchedalmond;
+  border: 1px solid black;
+  margin: 2em;
+  padding: 1em;
+}
+
+/* Contenedor de las dos columnas */
+section.peliculasfavoritas .peliculas{
+    grid-area: peliculas;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 0;                       
+    background-color: blanchedalmond;
+    border: 1px solid black;
+    margin: 2em;
+    padding: 0 .75rem;
+}
+
+
+section.peliculasfavoritas .col{
+    padding: 0 .75rem;
+    
+}
+section.peliculasfavoritas .col.col--left{
+    border-right: 1px solid black; 
+}
+
+
+section.peliculasfavoritas .col__title{
+    margin: 0;
+    padding: .4rem .6rem;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    font-weight: 600;
+}
+
+
+section.peliculasfavoritas .cards{
+    list-style: decimal inside;  
+    margin: 0;
+    padding: 0;
+}
+
+section.peliculasfavoritas .card{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: .75rem;
+    align-items: center;
+    padding: .75rem;
+    border-bottom: 1px solid black; 
+}
+
+section.peliculasfavoritas .card > img{
+    width: 15em;
+    height: 20em; 
+    object-fit: fill; 
+    display: block;
+}
+
+section.peliculasfavoritas .card > p{
+    margin: 0; 
+    text-align: left;
+}
+
+section.peliculasfavoritas .card > .wide{
+    grid-column: 1 / -1;
+    width: 100%;
+    border: none; 
+    display: block;
+}
+
+main.biografia #Cancionesfavoritas{
+  background:  blanchedalmond;
+  padding: 16px;
+  border: 1px solid black;
+  margin-block: 18px;
+}
+
+main.biografia #Cancionesfavoritas > h2{
+  background: blanchedalmond;          /* barra gris como subtítulo */
+  padding: 10px 14px;
+  border: 1px solid black;
+  margin: 0 0 12px 0;
+}
+
+main.biografia #Cancionesfavoritas table{
+  width: 100%;
+  border-collapse: collapse;     /* rejilla compacta */
+  table-layout: fixed;           /* celdas del mismo ancho */
+  overflow-x: auto;              /* scroll si no cabe */
+  display: table;
+  margin-inline: auto;                /* permite overflow en móviles */
+}
+
+main.biografia #Cancionesfavoritas thead th{
+  background: aliceblue;          /* un poco más oscuro para encabezado */
+  font-weight: 700;
+}
+
+main.biografia #Cancionesfavoritas th,
+main.biografia #Cancionesfavoritas td{
+  border: 1px solid #7f7f7f;     /* líneas de la rejilla */
+  background: aliceblue;           /* gris de las celdas */
+  padding: 10px 12px;
+  text-align: center;
+  color: #222;
+}
+
+/***************  Multimedia: izq (canción) | der (artista + imagen)  ***************/
+main.biografia #multimedia{
+  background:  blanchedalmond;
+  padding: 16px;
+  border-radius: 8px;
+  margin-block: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "titulo titulo"
+    "songTitle artistTitle"
+    "audio     image"
+    "line      line";
+  gap: 12px 20px;
+  align-items: start;
+}
+
+main.biografia #multimedia > h2:first-of-type{
+  grid-area: titulo;
+  background: blanchedalmond;          /* barra gris como subtítulo */
+  padding: 10px 14px;
+  margin: 0 0 4px 0;
+  border: 1px solid black;
+}
+
+/* Título de la canción (izquierda) */
+main.biografia #multimedia > h3{
+  grid-area: songTitle;
+  margin-bottom: 4em;
+}
+
+/* Audio debajo del título de la canción */
+main.biografia #multimedia > audio{
+  grid-area: audio;
+  width: 100%;
+}
+
+/* Título del artista (derecha) */
+main.biografia #multimedia > h2:nth-of-type(2){
+  grid-area: artistTitle;
+  font-size: 1.25rem;
+  margin: 0;
+  padding-left: 16px;
+  border-left: 2px solid #9a9a9a; /* separador vertical */
+}
+
+/* Imagen a la derecha, debajo del título del artista */
+main.biografia #multimedia > a{
+  grid-area: image;
+  display: block;
+  padding-left: 16px;
+  border-left: 2px solid #9a9a9a; /* continúa el separador */
+}
+
+main.biografia #multimedia > video{
+  grid-area: image;
+  display: block;
+  padding-left: 16px;
+  border-left: 2px solid #9a9a9a; /* continúa el separador */
+  width: 97.5%;
+  height: auto;
+  object-fit: cover;
+}
+
+main.biografia #multimedia > a img{
+  width: 100%;
+  height: auto;
+  border: 2px solid #d5d5d5;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* línea final (tu <hr/>) */
+main.biografia #multimedia > hr{
+  grid-area: line;
+  border: none;
+  border-top: 1px solid #cfcfcf;
+  margin: 6px 0 0;
+}
+
+/* Responsive: apila en una columna */
+@media (max-width: 820px){
+  main.biografia #multimedia{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "titulo"
+      "songTitle"
+      "audio"
+      "artistTitle"
+      "image"
+      "line";
+  }
+  main.biografia #multimedia > h2:nth-of-type(2),
+  main.biografia #multimedia > a{
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+
+/*tema.css*/
+
+/* espacio del main */
+
+/* Tarjeta contenedora de cada receta */
+main section{
+  background: blanchedalmond;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 2em;
+}
+
+/* Título de la receta */
+main section > h2{
+  text-align: center;
+  margin: 20px 0 20px 0;
+}
+
+/* === GRID solo para imagen + ingredientes === */
+main section article.fila{
+  display: grid;
+  grid-template-columns: minmax(240px, 340px) 1fr; /* izq=img | der=ingredientes */
+  gap: 20px 28px;
+  align-items: start;
+}
+
+/* Imagen (columna izquierda) */
+main section article.fila img{
+  margin-left: 10em;
+  width: 130%;
+  height: auto;
+  border-radius: 6px;
+  border: 2px solid #d5d5d5;
+  object-fit: cover;
+  aspect-ratio: 4/3; /* opcional */
+}
+
+/* Ingredientes (columna derecha) */
+main section article.fila .ingredientes h3{
+  margin: 0 0 6px 0;
+   text-align: center;
+}
+main section article.fila .ingredientes ul{
+  margin: 0 0 0 18px;
+}
+main section article.fila .ingredientes li{
+  margin-bottom: 6px;
+}
+
+/* Procedimiento debajo (fuera del grid) */
+main section .procedimiento{
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+main section .procedimiento h3{
+  margin: 0 0 6px 0;
+  text-align: center;
+}
+main section .procedimiento ol{
+  margin: 0 0 0 18px;
+}
+main section .procedimiento li{
+  margin-bottom: 6px;
+}
+
+/* Responsive: apilar imagen e ingredientes */
+@media (max-width: 760px){
+  main{ padding: 1.25em; }
+  main section article.fila{
+    grid-template-columns: 1fr;
+    gap: 10px 0;
+  }
+  main section article.fila img{
+    max-width: 520px;
+    justify-self: center;
+  }
+}
+
+/*curriculo.css*/
+
+/* contenedor principal */
+
+/* main */
+main form{
+  background-color: blanchedalmond;
+  margin: 0em 2em 2em 2em;
+  padding-left: 3em;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  border: 2px solid #000;
+  border-radius:  8px;
+}
+
+/* textos tipo etiqueta */
+main form{
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* inputs de texto alineados a la derecha, con el ancho del prototipo */
+main form input[type="text"]{
+  width: 75%;
+  margin: 1em 0em 2em auto;        /* empuja a la derecha */
+  padding: 10px 12px;
+  border: 1px solid #c3c3c3;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 1px 0 #eee inset;
+  font-weight: 500;
+  color: #222;
+}
+
+/* radios de “Sexo” uno debajo del otro, con sangría */
+main form input[type="radio"]{
+  margin: 6px 6px 6px 10px;
+  transform: translateY(1px);
+}
+main form input[type="radio"] + *{
+  font-weight: 500;
+}
+
+/* botón por si luego agregas uno */
+main form button,
+main form input[type="submit"]{
+  display: block;
+  margin: 10px auto 0;
+  padding: 1em;
+  border: 1px solid #bdbdbd;
+  border-radius: 6px;
+  background: #efefef;
+  cursor: pointer;
+}
+
+main form button:hover,
+main form input[type="submit"]:hover{ filter: brightness(0.95); }
